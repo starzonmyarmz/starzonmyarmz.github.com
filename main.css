@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  animation: backgroundColor 60s infinite linear;
+  background-color: #fff;
+  align-items: center;
+  color: #444;
+  display: flex;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  justify-content: center;
+  line-height: 1.5;
+  margin: 0;
+  padding: 1.5rem;
+  text-rendering: optimizelegibility;
+}
+
+section {
+  display: inline-block;
+}
+
+a {
+  color: #222;
+}
+
+br {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  br {
+    display: block;
+  }
+}
+
+@keyframes backgroundColor {
+  0% {
+    background-color: #8EEFEB;
+  }
+  20% {
+    background-color: #EEEF88;
+  }
+  40% {
+    background-color: #FCFDED;
+  }
+  60% {
+    background-color: #FF737F;
+  }
+  80% {
+    background-color: #FEC5F0;
+  }
+  100% {
+    background-color: #8EEFEB;
+  }
+}
