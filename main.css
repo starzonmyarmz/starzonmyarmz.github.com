@@ -12,12 +12,11 @@ body {
   font-family: "Montserrat", times, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   margin: 0;
   padding: 25px 25px 0;
   text-rendering: optimizelegibility;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 a {
@@ -45,21 +44,21 @@ h1 {
 }
 
 svg {
-  fill: currentColor;
+  fill: #333;
   vertical-align: middle;
 }
 
 .social {
   border: 0;
-  color: #888;
   display: inline-block;
-  margin-right: 10px;
+  margin: 40px 10px 0 0;
+  opacity: 0.6;
   padding: 0;
 }
 
-.twitter:hover  { color: #1DA1F2; }
-.dribbble:hover { color: #EA4C89; }
-.github:hover   { color: #181717; }
+.social:hover {
+  opacity: 1;
+}
 
 
 
@@ -87,5 +86,23 @@ svg {
   figure {
     height: auto;
     width: auto;
+  }
+}
+
+
+
+/* Sprinkles */
+
+@supports (mix-blend-mode: soft-light) {
+  body:after {
+    background-image: linear-gradient(-135deg, #90F7EC 0%, #32CCBC 100%);
+    bottom: 0;
+    content: '';
+    left: 0;
+    mix-blend-mode: soft-light;
+    position: fixed;
+    pointer-events: none;
+    right: 0;
+    top: 0;
   }
 }
