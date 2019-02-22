@@ -9,21 +9,14 @@ html, body {
 body {
   background-color: #fff;
   color: #333;
-  display: flex;
   font-family: "Montserrat", times, sans-serif;
   font-size: 20px;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   margin: 0;
-  padding: 0;
+  padding: 25px 25px 0;
   text-rendering: optimizelegibility;
-}
-
-body > * {
-  flex: 1 1 auto;
-  height: 100vh;
-  max-width: 50%
 }
 
 a {
@@ -34,15 +27,14 @@ a {
 }
 
 article {
-  align-items: center;
-  display: flex;
-  padding: 4rem;
 }
 
 figure {
   background: url('./marino.jpg') 50% 50% no-repeat;
   background-size: cover;
   margin: 0;
+  width: 250px;
+  height: 225px;
 }
 
 h1, p {
@@ -67,14 +59,35 @@ svg {
   padding: 0;
 }
 
-.twitter:hover {
-  color: #1DA1F2;
-}
+.twitter:hover  { color: #1DA1F2; }
+.dribbble:hover { color: #EA4C89; }
+.github:hover   { color: #181717; }
 
-.dribbble:hover {
-  color: #EA4C89;
-}
 
-.github:hover {
-  color: #181717;
+
+ /* Desktop */
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+
+  body > * {
+    flex: 1 1 auto;
+    height: 100vh;
+    max-width: 50%
+  }
+
+  article {
+    align-items: center;
+    display: flex;
+    padding: 4rem;
+  }
+
+  figure {
+    height: auto;
+    width: auto;
+  }
 }
