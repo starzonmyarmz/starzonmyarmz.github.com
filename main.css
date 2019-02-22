@@ -7,56 +7,74 @@ html, body {
 }
 
 body {
-  animation: backgroundColor 60s infinite linear;
   background-color: #fff;
-  align-items: center;
-  color: #444;
+  color: #333;
   display: flex;
-  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   margin: 0;
-  padding: 1.5rem;
+  padding: 0;
   text-rendering: optimizelegibility;
 }
 
-section {
-  display: inline-block;
+body > * {
+  flex: 1 1 auto;
+  height: 100vh;
+  max-width: 50%
 }
 
 a {
-  color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: inherit;
+  padding-bottom: 1px;
+  text-decoration: none;
 }
 
-br {
-  display: none;
+article {
+  align-items: center;
+  display: flex;
+  padding: 4rem;
 }
 
-@media screen and (min-width: 700px) {
-  br {
-    display: block;
-  }
+figure {
+  background: url('./marino.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  margin: 0;
 }
 
-@keyframes backgroundColor {
-  0% {
-    background-color: #8EEFEB;
-  }
-  20% {
-    background-color: #EEEF88;
-  }
-  40% {
-    background-color: #FCFDED;
-  }
-  60% {
-    background-color: #FF737F;
-  }
-  80% {
-    background-color: #FEC5F0;
-  }
-  100% {
-    background-color: #8EEFEB;
-  }
+h1, p {
+  margin: 25px 0;
+}
+
+h1 {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+svg {
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.social {
+  border: 0;
+  color: #888;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.twitter:hover {
+  color: #1DA1F2;
+}
+
+.dribbble:hover {
+  color: #EA4C89;
+}
+
+.github:hover {
+  color: #181717;
 }
